@@ -1,0 +1,5 @@
+﻿@{
+    Layout = "~/Layouts/MasterLayout.cshtml";
+    var searchQuery = Request["q"] != null ? Request["q"] : "nothing";
+}
+<h1>Your search for <strong>@searchQuery</strong> didn't return any results! :-)</h1>

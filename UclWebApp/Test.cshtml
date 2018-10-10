@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "~/Layouts/MasterLayout.cshtml";
+    string jsonStudent = UclWebLib.Data.Data.GetStudentAsJson();
+}
+<h1>Test</h1>
+<textarea>
+    @jsonStudent
+</textarea>

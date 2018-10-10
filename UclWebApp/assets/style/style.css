@@ -1,0 +1,61 @@
+.navbar {
+  background-color: #19444D;
+}
+
+main {
+  padding: 110px 0;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.links div {
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.links div a {
+  text-align: center;
+  font-size: 28pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-text-fill-color: #19444D;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.links div a:hover {
+  text-decoration: none;
+}
+
+.links div.teachers {
+  background-image: url("/assets/images/undervisere.jpg");
+}
+
+.links div.students {
+  background-image: url("/assets/images/studerende.jpg");
+}
+
+.detail {
+  max-width: 350px;
+}
+
+footer {
+  background-color: #123036;
+  min-height: 250px;
+  padding: 80px 0;
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
