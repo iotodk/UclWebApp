@@ -10,14 +10,32 @@ namespace UclWebLib.Data
 {
     public static class Data
     {
-
-        public static string GetStudentsAsJson(string filePath)
+        public static void CreateTeacherLIst()
         {
-            //TODO
-            //read the file
-            //parse it
-            //return it
-            return string.Empty;
+
+        }
+
+        public static void GetStudentsAsJson(string filePath)
+        {
+            //create an empty list of type Student
+            List<Student> students = new List<Student>();
+            //create 25 mock Students
+            for(int i = 0; i < 25; i++)
+            {
+                Student student = new Student()
+                {
+                    CPR = 12345678 + i,
+                    Name = "Io To" + i,
+                    Email = "ioto@ucl.dk",
+                    Phone = 23547589 + i,
+                    Address = new Address($"Seeblasgade {i}", 5000, "Odense", "Denmark")
+                };
+                //add each student to the list
+                students.Add(student);
+            }
+            // serialize the list
+            var json = JsonConvert.SerializeObject(students);
+            System.IO.File.WriteAllText(filePath, json);
         }
 
         public static string GetStudentAsJson()
@@ -32,5 +50,6 @@ namespace UclWebLib.Data
             };
             return JsonConvert.SerializeObject(student);
         }
+        
     }
 }
